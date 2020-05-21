@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/head :: common_head(~{::title},~{})">
+    <title></title>
+</head>
+<body>
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-body ">
+            <div class="layui-form layui-row layui-col-space10" id="LAY-app-detail">
+                <input id="id" type="hidden" name="id">
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">项目代码</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="project_code" placeholder="请输入项目代码"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">创建人id</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="creation_id" placeholder="请输入创建人id"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">修改时间</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="modification_date" placeholder="请输入修改时间"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">修改人id</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="modification_id" placeholder="请输入修改人id"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">删除标记</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="status" placeholder="请输入删除标记"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">所属产品代码</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="product_code" placeholder="请输入所属产品代码"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">项目名称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="project_name" placeholder="请输入项目名称"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">项目性质</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="project_nature" placeholder="请输入项目性质"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">项目经理CODE</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="project_managercode" placeholder="请输入项目经理CODE"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">项目经理</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="project_manager" placeholder="请输入项目经理"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">OA事件/需求单使用</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="o_a" placeholder="请输入OA事件/需求单使用"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">主要使用业务线</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="main_usebusinessline" placeholder="请输入主要使用业务线"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">项目开始日期</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="project_startdate" placeholder="请输入项目开始日期"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">优先级</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="priority" placeholder="请输入优先级"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">项目状态</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="project_type" placeholder="请输入项目状态"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">项目阶段</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="project_stage" placeholder="请输入项目阶段"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">预警状态</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="early_warningtype" placeholder="请输入预警状态"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">项目发布人CODE</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="project_issuercode" placeholder="请输入项目发布人CODE"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">项目发布人</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="project_issuer" placeholder="请输入项目发布人"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">重点投入</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="emphasis_putinto" placeholder="请输入重点投入"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">系统架构</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="system_framework" placeholder="请输入系统架构"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">项目禅道ID</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="project_zentaoid" placeholder="请输入项目禅道ID"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">项目禅道名称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="project_zentaoname" placeholder="请输入项目禅道名称"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">项目SVN地址</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="project_svnaddress" placeholder="请输入项目SVN地址"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">项目简介</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="project_brief" placeholder="请输入项目简介"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">项目描述</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="project_description" placeholder="请输入项目描述"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">项目GIT地址</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="project_gitaddress" placeholder="请输入项目GIT地址"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">OA周报</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="oa_weekwork" placeholder="请输入OA周报"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">业务分类</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="business_type" placeholder="请输入业务分类"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">是否为数字化项目</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="project_digitization" placeholder="请输入是否为数字化项目"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-col-space10" th:if="${event} == 'show' or ${event} == 'edit'">
+                    <div class="layui-col-md6">
+                        <label class="layui-form-label">创建时间</label>
+                        <div class="layui-input-block">
+                            <input name="creation_date" type="text" autocomplete="off" disabled="true"
+                                   class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <label class="layui-form-label">创建人</label>
+                        <div class="layui-input-block">
+                            <input name="creation_user_name" type="text" autocomplete="off" disabled="true"
+                                   class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <label class="layui-form-label">修改人</label>
+                        <div class="layui-input-block">
+                            <input name="modification_user_name" type="text" autocomplete="off" disabled="true"
+                                   class="layui-input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer th:replace="common/footer :: common_footer"></footer>
+<script type="text/html" id="detailToolbar" th:if="${event} == 'add' or ${event} == 'edit'">
+    <button class="layui-btn layui-btn-sm" lay-event="save">保存</button>
+    <button class="layui-btn layui-btn-sm layui-btn-primary" lay-event="cancel">取消</button>
+</script>
+<script th:inline="javascript">
+    var responseResult = [[${responseResult}]];
+    var event = [[${event}]];
+</script>
+<script th:src="@{/js/pmsproject/detail.js}"></script>
+</body>
+</html>

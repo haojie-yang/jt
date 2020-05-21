@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/head :: common_head(~{::title},~{})">
+    <title></title>
+</head>
+<body>
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-body ">
+            <div class="layui-form layui-row layui-col-space10" id="LAY-app-detail">
+                <input id="id" type="hidden" name="id">
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">ID</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="id" placeholder="请输入ID"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">创建人id</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="creation_id" placeholder="请输入创建人id"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">修改时间</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="modification_date" placeholder="请输入修改时间"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">修改人id</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="modification_id" placeholder="请输入修改人id"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">删除标记</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="status" placeholder="请输入删除标记"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">人员id</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="staff_id" placeholder="请输入人员id"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">角色</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="role" placeholder="请输入角色"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">类型</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="type" placeholder="请输入类型"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">职位</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="position" placeholder="请输入职位"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">禅道账号</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="zentao_account" placeholder="请输入禅道账号"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">联系电话</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="iphone" placeholder="请输入联系电话"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">入职时间</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="entry_time" placeholder="请输入入职时间"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">离职时间</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="resignation_time" placeholder="请输入离职时间"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">其他联系方式</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="other_contactway" placeholder="请输入其他联系方式"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">公司名称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="company_name" placeholder="请输入公司名称"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">备注说明</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="remark" placeholder="请输入备注说明"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-col-space10" th:if="${event} == 'show' or ${event} == 'edit'">
+                    <div class="layui-col-md6">
+                        <label class="layui-form-label">创建时间</label>
+                        <div class="layui-input-block">
+                            <input name="creation_date" type="text" autocomplete="off" disabled="true"
+                                   class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <label class="layui-form-label">创建人</label>
+                        <div class="layui-input-block">
+                            <input name="creation_user_name" type="text" autocomplete="off" disabled="true"
+                                   class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <label class="layui-form-label">修改人</label>
+                        <div class="layui-input-block">
+                            <input name="modification_user_name" type="text" autocomplete="off" disabled="true"
+                                   class="layui-input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer th:replace="common/footer :: common_footer"></footer>
+<script type="text/html" id="detailToolbar" th:if="${event} == 'add' or ${event} == 'edit'">
+    <button class="layui-btn layui-btn-sm" lay-event="save">保存</button>
+    <button class="layui-btn layui-btn-sm layui-btn-primary" lay-event="cancel">取消</button>
+</script>
+<script th:inline="javascript">
+    var responseResult = [[${responseResult}]];
+    var event = [[${event}]];
+</script>
+<script th:src="@{/js/pmsstaffdetails/detail.js}"></script>
+</body>
+</html>

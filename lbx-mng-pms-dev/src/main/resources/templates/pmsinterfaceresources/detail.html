@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/head :: common_head(~{::title},~{})">
+    <title></title>
+</head>
+<body>
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-body ">
+            <div class="layui-form layui-row layui-col-space10" id="LAY-app-detail">
+                <input id="id" type="hidden" name="id">
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">ID</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="id" placeholder="请输入ID"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">创建人id</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="creation_id" placeholder="请输入创建人id"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">修改时间</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="modification_date" placeholder="请输入修改时间"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">修改人id</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="modification_id" placeholder="请输入修改人id"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">删除标记</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="status" placeholder="请输入删除标记"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">项目代码</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="project_code" placeholder="请输入项目代码"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">连接方式</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="attended_mode" placeholder="请输入连接方式"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">接口名称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="interface_name" placeholder="请输入接口名称"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">源系统</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="origin_system" placeholder="请输入源系统"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">目标系统</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="target_system" placeholder="请输入目标系统"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">生产环境调用地址</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="production_environmentaddress" placeholder="请输入生产环境调用地址"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">测试环境调用地址</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="test_environmentaddress" placeholder="请输入测试环境调用地址"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">接口类型</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="interface_type" placeholder="请输入接口类型"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">使用频率</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="use_frequency" placeholder="请输入使用频率"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">分类</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="type" placeholder="请输入分类"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">数据规模</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="data_scale" placeholder="请输入数据规模"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">业务简述</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="business_brief" placeholder="请输入业务简述"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">设计简述</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="design_brief" placeholder="请输入设计简述"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">运行状态</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="running_status" placeholder="请输入运行状态"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">SVN相关需求设计文档地址</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="svn_designdocumentaddress" placeholder="请输入SVN相关需求设计文档地址"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-col-space10" th:if="${event} == 'show' or ${event} == 'edit'">
+                    <div class="layui-col-md6">
+                        <label class="layui-form-label">创建时间</label>
+                        <div class="layui-input-block">
+                            <input name="creation_date" type="text" autocomplete="off" disabled="true"
+                                   class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <label class="layui-form-label">创建人</label>
+                        <div class="layui-input-block">
+                            <input name="creation_user_name" type="text" autocomplete="off" disabled="true"
+                                   class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <label class="layui-form-label">修改人</label>
+                        <div class="layui-input-block">
+                            <input name="modification_user_name" type="text" autocomplete="off" disabled="true"
+                                   class="layui-input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer th:replace="common/footer :: common_footer"></footer>
+<script type="text/html" id="detailToolbar" th:if="${event} == 'add' or ${event} == 'edit'">
+    <button class="layui-btn layui-btn-sm" lay-event="save">保存</button>
+    <button class="layui-btn layui-btn-sm layui-btn-primary" lay-event="cancel">取消</button>
+</script>
+<script th:inline="javascript">
+    var responseResult = [[${responseResult}]];
+    var event = [[${event}]];
+</script>
+<script th:src="@{/js/pmsinterfaceresources/detail.js}"></script>
+</body>
+</html>

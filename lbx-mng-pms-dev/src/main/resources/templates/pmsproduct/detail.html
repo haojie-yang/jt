@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/head :: common_head(~{::title},~{})">
+    <title></title>
+</head>
+<body>
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-body ">
+            <div class="layui-form layui-row layui-col-space10" id="LAY-app-detail">
+                <input id="id" type="hidden" name="id">
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">产品代码</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="product_code" placeholder="请输入产品代码"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">修改时间</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input" name="modification_date" id="test5" placeholder="请输入修改时间" autocomplete="off">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">产品状态</label>
+                    <div class="layui-input-block">
+                        <select name="product_type">
+                            <option value="">请选择产品状态</option>
+                            <option value="0">启动</option>
+                            <option value="1">已下线</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">归属责任部门</label>
+                    <div class="layui-input-block">
+                        <select name="responsible_department">
+                            <option value="">请选择归属责任部门</option>
+                            <option value="0">运维实施部</option>
+                            <option value="1">系统开发部</option>
+                            <option value="2">系统研发部</option>
+                            <option value="3">数据研究部</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">产品名称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="product_name" placeholder="请输入产品名称"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">业务分类</label>
+                    <div class="layui-input-block">
+                        <select name="business_type">
+                            <option value="">请选择业务分类</option>
+                            <option value="0">企业管理</option>
+                            <option value="1">新零售业务</option>
+                            <option value="2">星火业务</option>
+                            <option value="3">业务运营管理</option>
+                            <option value="4">智能决策支持</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">产品说明</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="product_explain" placeholder="请输入产品说明"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">备注说明</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="remark" placeholder="请输入备注说明"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-col-space10" th:if="${event} == 'show' or ${event} == 'edit'">
+                    <div class="layui-col-md6">
+                        <label class="layui-form-label">创建时间</label>
+                        <div class="layui-input-block">
+                            <input name="creation_date" type="text" autocomplete="off" disabled="true"
+                                   class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <label class="layui-form-label">创建人</label>
+                        <div class="layui-input-block">
+                            <input name="creation_user_name" type="text" autocomplete="off" disabled="true"
+                                   class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <label class="layui-form-label">修改人</label>
+                        <div class="layui-input-block">
+                            <input name="modification_user_name" type="text" autocomplete="off" disabled="true"
+                                   class="layui-input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer th:replace="common/footer :: common_footer"></footer>
+<script type="text/html" id="detailToolbar" th:if="${event} == 'add' or ${event} == 'edit'">
+    <button class="layui-btn layui-btn-sm" lay-event="save">保存</button>
+    <button class="layui-btn layui-btn-sm layui-btn-primary" lay-event="cancel">取消</button>
+</script>
+<script th:inline="javascript">
+    var responseResult = [[${responseResult}]];
+    var event = [[${event}]];
+</script>
+<script th:src="@{/js/pmsproduct/detail.js}"></script>
+</body>
+</html>

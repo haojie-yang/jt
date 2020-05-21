@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/head :: common_head(~{::title},~{})">
+    <title></title>
+</head>
+<body>
+<div class="layui-fluid">
+    <div class="layui-row">
+        <div class="layui-card">
+            <div class="layui-card-header">管理</div>
+            <div class="layui-card-body">
+                <div class="layui-form" id="LAY-app-search">
+                    <div class="layui-form-item layui-form-item-search">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">条件1</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="cond1" placeholder="请输入" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">条件2</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="cond2" placeholder="请输入" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table id="LAY-app-list" class="layui-table"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<footer th:replace="common/footer :: common_footer"></footer>
+<script type="text/html" id="listToolbar">
+    <button class="layui-btn layui-btn-sm" lay-event="add" lay-msg="新增demo"><i class="layui-icon">&#xe608;</i>新增</button>
+</script>
+<script type="text/html" id="listRowToolbar">
+    <button class="layui-btn layui-btn-xs layui-btn-warm" lay-event="show" lay-msg="查看demo">查看</button>
+    <button class="layui-btn layui-btn-xs" lay-event="edit" lay-msg="修改demo">修改</button>
+    <button class="layui-btn layui-btn-xs layui-btn-danger" lay-event="delete" lay-msg="删除">删除</button>
+</script>
+<script th:src="@{/js/pmsthirdpartyresources/index.js}"></script>
+</body>
+</html>

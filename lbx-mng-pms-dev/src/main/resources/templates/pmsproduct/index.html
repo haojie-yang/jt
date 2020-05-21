@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/head :: common_head(~{::title},~{})">
+    <title></title>
+</head>
+<body>
+<div class="layui-fluid">
+    <div class="layui-row">
+        <div class="layui-card">
+            <div class="layui-card-header">管理</div>
+            <div class="layui-card-body">
+                <div class="layui-form" id="LAY-app-search">
+                    <div class="layui-form-item layui-form-item-search">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">责任部门</label>
+                            <div class="layui-input-inline">
+                                <select name="responsible_department">
+                                    <option value="0">请选择归属责任部门</option>
+                                    <option value="1">运维实施部</option>
+                                    <option value="2">系统开发部</option>
+                                    <option value="3">系统研发部</option>
+                                    <option value="4">数据研究部</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">产品名称</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="product_name" placeholder="请输入" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">产品状态</label>
+                            <div class="layui-input-inline">
+                                <select name="product_type">
+                                    <option value="0">请选择产品状态</option>
+                                    <option value="1">启动</option>
+                                    <option value="2">已下线</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">业务分类</label>
+                            <div class="layui-input-inline">
+                                <select name="business_type">
+                                    <option value="0">请选择业务分类</option>
+                                    <option value="1">企业管理</option>
+                                    <option value="2">新零售业务</option>
+                                    <option value="3">星火业务</option>
+                                    <option value="4">业务运营管理</option>
+                                    <option value="5">智能决策支持</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table id="LAY-app-list" class="layui-table"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<footer th:replace="common/footer :: common_footer"></footer>
+<script type="text/html" id="listToolbar">
+    <button class="layui-btn layui-btn-sm" lay-event="add" lay-msg="添加产品"><i class="layui-icon">&#xe608;</i>新增</button>
+    <button class="layui-btn layui-btn-sm" lay-event="add" lay-msg="导出">导出</button>
+    <button class="layui-btn layui-btn-sm" lay-event="del" lay-msg="删除">删除</button>
+</script>
+<script type="text/html" id="listRowToolbar">
+    <button class="layui-btn layui-btn-xs layui-btn-warm" lay-event="show" lay-msg="查看详情">查看</button>
+    <button class="layui-btn layui-btn-xs" lay-event="edit" lay-msg="修改">修改</button>
+    <button class="layui-btn layui-btn-xs layui-btn-danger" lay-event="delete" lay-msg="删除">删除</button>
+</script>
+<script th:src="@{/js/pmsproduct/index.js}"></script>
+</body>
+</html>
